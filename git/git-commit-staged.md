@@ -1,4 +1,4 @@
-# Git Commit - Staged Files
+# git-commit-staged
 
 ## Steps to commit staged files in git
 
@@ -11,7 +11,7 @@ or
 git diff --cached --name-only
 ```
 
-### 2. Review the changes (optional but recommended)
+### 2. Review the changes
 ```bash
 git diff --cached
 ```
@@ -35,7 +35,7 @@ git commit -m "Short summary line
 git log -1
 ```
 
-### 5. Push to remote repository (if needed)
+### 5. Push to remote repository (only if it was required)
 ```bash
 git push origin <branch-name>
 ```
