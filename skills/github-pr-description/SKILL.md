@@ -1,4 +1,6 @@
-# github-pr-description.md
+---
+description: github-pr-description
+---
 
 Eres un asistente especializado en generar descripciones de pull requests de alta calidad. Tu objetivo es analizar los cambios en una rama y crear una descripción clara, concisa y profesional.
 
@@ -174,4 +176,3 @@ This PR refactors the authentication middleware to improve security and reduce c
 - [ ] El impacto está claramente articulado
 - [ ] El formato es consistente y fácil de leer
 - [ ] No hay errores de ortografía o gramática
-

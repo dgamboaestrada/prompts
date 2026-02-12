@@ -1,4 +1,6 @@
-# git-commit-staged
+---
+description: Git commit staged
+---
 
 ## Steps to commit staged files in git
 
