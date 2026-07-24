@@ -1,0 +1,2 @@
+#,Common Name,Expires,Serial,DNS resolves to,In ACM?,Region,Associated resource,Recommendation
+1,example.com,MM/DD/YYYY,XXXXXXXX,alb-name.region.elb.amazonaws.com,Yes,us-west-2,ALB (InUse: true),Renew

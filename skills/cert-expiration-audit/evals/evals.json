@@ -1,0 +1,23 @@
+{
+  "skill_name": "cert-expiration-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Nos llegó una notificación de AWS Health de que 5 certificados ACM expiran en 30 días en la cuenta acme-prod (regiones us-east-1 y us-west-2): api.acme.com, legacy-billing.acme.com, cdn.acme.com, staging-api.acme.com, unused-svc.acme.com. Audita cuáles siguen en uso y cuáles podemos dejar expirar.",
+      "expected_output": "Un log de proceso por dominio (DNS + ACM + verificación de destino) y una tabla final con la clasificación Renovar/No renovar/Reportar para cada uno de los 5 dominios, con evidencia concreta (InUseBy, estado del ELB/ALB, etc.) respaldando cada fila.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We have a batch of 8 expiring TLS certs across our acme-corp AWS account (us-west-2 mostly). Some of these domains are hosted outside AWS (Akamai or WordPress VIP) and a couple might belong to a sibling AWS account. Can you audit which ones we should renew, which are dead, and which need to be flagged to another team?",
+      "expected_output": "Same audit workflow applied to 8 domains, with correct handling of the Akamai/WordPress VIP non-AWS cases (classified as Report, not guessed as Renew/Do not renew) and correct handling of any cross-account CloudFront distribution (flagged as Report/possibly another account rather than asserted as unused).",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Encontré este certificado que expira en 2 semanas: origin-api.internal.example.com, serial ABC123, no aparece en ACM de us-east-1 ni us-west-2. Resuelve por DNS interno a un ELB pero por fuera da NXDOMAIN. ¿Lo renovamos?",
+      "expected_output": "A single-domain walkthrough that still follows the skill's methodology: checks internal vs external DNS, checks the ELB target's existence, checks other regions/SANs before concluding, and lands on a clear Renew/Do not renew/Report recommendation with the reasoning spelled out (internal-only traffic still counts as in-use).",
+      "files": []
+    }
+  ]
+}
