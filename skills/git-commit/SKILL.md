@@ -9,7 +9,7 @@ description: |
 license: MIT
 metadata:
   author: Daniel Gamboa Estrada
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Role and Context
@@ -138,7 +138,6 @@ Show the user:
 1. A concise diff summary (files changed, insertions, deletions from `git diff --cached --stat`)
 2. The proposed commit message in a code block
 3. If branch-prefixed format is also applicable, show the alternative
-4. Ask for explicit confirmation or edits
 
 Example presentation:
 
@@ -154,19 +153,13 @@ feat(auth): add retry logic to login handler
 
 Prevents cascading failures during transient network issues.
 ---
-
-Proceed with this message? (Yes / No / Edit)
 ```
 
----
-
-## Step 7: Mandatory confirmation
-
-**MUST** wait for explicit confirmation ("Yes", "Proceed", "Approved", or equivalent) before executing the commit. Accept edits inline and re-validate before committing.
+After presenting the message, proceed directly to Step 7.
 
 ---
 
-## Step 8: Create the commit
+## Step 7: Create the commit
 
 ```bash
 git commit -m "$(cat <<'EOF'
@@ -188,17 +181,17 @@ EOF
 
 ---
 
-## Step 9: Verify the commit
+## Step 8: Verify the commit
 
 ```bash
 git log -1
 ```
 
-Confirm the message matches what was approved.
+Confirm the message matches what was proposed and was successfully committed.
 
 ---
 
-## Step 10: Push (only if explicitly requested)
+## Step 9: Push (only if explicitly requested)
 
 ```bash
 git push origin <branch-name>
