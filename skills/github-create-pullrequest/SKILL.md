@@ -4,7 +4,7 @@ description: Use this skill when the user's goal is to CREATE a pull request or 
 license: MIT
 metadata:
   author: Daniel Gamboa Estrada
-  version: "0.4.0"
+  version: "0.5.0"
 ---
 
 # Role and Context
@@ -85,15 +85,7 @@ EOF
 
 Include all applicable sections from the **Description template**. Omit sections that add no value (e.g., no breaking changes — skip that section).
 
-### Step 6 — Show draft and confirm
-
-```bash
-cat /tmp/pr_body.md
-```
-
-Ask the user: "Does this look good, or would you like any changes before I create the PR?" Wait for their response. If they request changes, update `/tmp/pr_body.md` and show it again.
-
-### Step 7 — Create the PR
+### Step 6 — Create the PR
 
 ```bash
 # Standard PR (default)
@@ -118,7 +110,7 @@ gh pr create --draft \
 - Otherwise, use a plain imperative title: `Add user authentication` not `Added user authentication`
 - Match the exact casing of ticket IDs from the branch name
 
-### Step 8 — Open in browser
+### Step 7 — Open in browser
 
 ```bash
 gh pr view --web
