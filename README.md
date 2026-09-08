@@ -5,29 +5,34 @@
 Global agent-compatible:
 ```bash
 mkdir -p ~/.agents/skills/
-ln -s $PWD/skills/* ~/.agents/skills/.
+ln -sfn $PWD/skills/* ~/.agents/skills/.
 ```
 
 Claude Code agent-compatible:
 ```bash
 mkdir -p ~/.claude/skills/
-ln -s $PWD/skills/* ~/.claude/skills/.
+ln -sfn $PWD/skills/* ~/.claude/skills/.
 ```
 
 Global Antigravity agent:
 ```bash
 mkdir -p ~/.gemini/antigravity/skills
-ln -s $PWD/skills/* ~/.gemini/antigravity/skills/.
+ln -sfn $PWD/skills/* ~/.gemini/antigravity/skills/.
+```
+
+## Installing Global Agent configuration
+```bash
+ln -sfn $PWD/AGENTS.md ~/.agents/AGENTS.md
 ```
 
 ## Installing Antigravity configuration
 ```bash
-ln -s $PWD/AGENTS.md ~/.gemini/AGENTS.md
+ln -sfn $PWD/AGENTS.md ~/.gemini/AGENTS.md
 ```
 
 ## Installing Claude configuration
 ```bash
-ln -s $PWD/AGENTS.md ~/.claude/CLAUDE.md
+ln -sfn $PWD/AGENTS.md ~/.claude/CLAUDE.md
 ```
 
 
