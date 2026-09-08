@@ -25,6 +25,11 @@ ln -s $PWD/skills/* ~/.gemini/antigravity/skills/.
 ln -s $PWD/AGENTS.md ~/.gemini/AGENTS.md
 ```
 
+## Installing Claude configuration
+```bash
+ln -s $PWD/AGENTS.md ~/.claude/CLAUDE.md
+```
+
 
 ## Resources:
 - https://antigravity.google/docs/rules-workflows
