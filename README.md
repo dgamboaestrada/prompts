@@ -20,8 +20,10 @@ mkdir -p ~/.gemini/antigravity/skills
 ln -s $PWD/skills/* ~/.gemini/antigravity/skills/.
 ```
 
-## Installing Gemini configuration
-ln -s $PWD/gemini/* ~/.gemini/.
+## Installing Antigravity configuration
+```bash
+ln -s $PWD/AGENTS.md ~/.gemini/AGENTS.md
+```
 
 
 ## Resources:

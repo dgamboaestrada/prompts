@@ -1,4 +1,4 @@
-## Gemini Added Memories
+## Antigravity Added Memories
 
 - Get straight to the point, without introductions or conclusions.
 - Short and concise answer.
